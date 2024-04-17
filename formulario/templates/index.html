@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Evaluación</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+<body>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <h1>Cuestionario de perfil lingüístico</h1>
+        <p>A continuación le haremos unas preguntas sobre sus habilidades lingüísticas. No hay respuestas correctas ni incorrectas. Por favor, conteste cada pregunta con sinceridad ¡Muchas gracias!</p>
+        <h2>Información general</h2>
+        <label for="todayDate">Fecha de hoy:</label>
+        <input type="date" id="todayDate" name="todayDate" required>
+
+        <label for="participantInfo">Apellido y nombre (o código de participante):</label>
+        <input type="text" id="participantInfo" name="participantInfo" required>
+
+        <label>¿Usó barbijo o mascarilla durante la evaluación?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" id="maskYes" name="maskUsage" value="SI" required>
+                Si
+            </label>
+            <label>
+                <input type="radio" id="maskNo" name="maskUsage" value="NO">
+                No
+            </label>
+        </div>
+
+         <label>¿Fuma o solía fumar mucho?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" id="smokeYes" name="smokeHabit" value="SI" required>
+                Si
+            </label>
+            <label>
+                <input type="radio" id="smokeNo" name="smokeHabit" value="NO">
+                No
+            </label>
+        </div>
+
+        <label>¿Ha tenido alguna vez una operación de garganta?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" id="throatOpYes" name="throatOperation" value="SI" required>
+                Si
+            </label>
+            <label>
+                <input type="radio" id="throatOpNo" name="throatOperation" value="NO">
+                No
+            </label>
+        </div>
+
+        <label>Primera lengua</label>
+        <select id="firstLanguage" name="firstLanguage" required>
+            <option value="Español">Español</option>
+            <option value="Portugués">Portugués</option>
+            <option value="Inglés">Inglés</option>
+            <option value="Italiano">Italiano</option>
+            <option value="Francés">Francés</option>
+            <option value="Alemán">Alemán</option>
+            <option value="Chino">Chino</option>
+            <option value="Japonés">Japonés</option>
+            <option value="Turco">Turco</option>
+            <option value="Otra">Otra</option>
+        </select>
+
+        <label>Si escogió "otra", indique la lengua aquí:</label>
+        <input type="text" id="otherLanguage1" name="otherLanguage1">
+
+        <label>Segunda lengua</label>
+        <select id="secondLanguage" name="secondLanguage" required>
+            <option value="Español">None</option>
+            <option value="Español">Español</option>
+            <option value="Portugués">Portugués</option>
+            <option value="Inglés">Inglés</option>
+            <option value="Italiano">Italiano</option>
+            <option value="Francés">Francés</option>
+            <option value="Alemán">Alemán</option>
+            <option value="Chino">Chino</option>
+            <option value="Japonés">Japonés</option>
+            <option value="Turco">Turco</option>
+            <option value="Otra">Otra</option>
+        </select>
+
+        <label>Si escogió "otra", indique la lengua aquí:</label>
+        <input type="text" id="otherLanguage2" name="otherLanguage2">
+
+        <label>Otras lenguas:</label>
+        <input type="text" id="otherLanguages" name="otherLanguages">
+
+        <h2>Historial Lingüistico</h2>
+        <label for="ageFirstLanguage">¿A qué edad aprendió a usar la primera lengua?</label>
+        <select id="ageFirstLanguage" name="ageFirstLanguage">
+            <option value="Nacimiento">Desde el nacimiento</option>
+            <option value="1">1 año</option>
+            <option value="2">2 años</option>
+            <option value="3">3 años</option>
+            <option value="4">4 años</option>
+            <option value="5">5 años</option>
+            <option value="6">6 años</option>
+            <option value="7">7 años</option>
+            <option value="8">8 años</option>
+            <option value="9">9 años</option>
+            <option value="10">10 años</option>
+            <option value="11">11 años</option>
+            <option value="12">12 años</option>
+            <option value="13">13 años</option>
+            <option value="14">14 años</option>
+            <option value="15">15 años</option>
+            <option value="16">16 años</option>
+            <option value="17">17 años</option>
+            <option value="18">18 años</option>
+            <option value="19">19 años</option>
+            <option value="20 o más">20 años o más</option>
+        </select>
+
+        <label for="ageSecondLanguage">¿A qué edad aprendió a usar la segunda lengua?</label>
+        <select id="ageSecondLanguage" name="ageSecondLanguage">
+            <option value="No reporta">No reporta segunda lengua</option>
+            <option value="Nacimiento">Desde el nacimiento</option>
+            <option value="1">1 año</option>
+            <option value="2">2 años</option>
+            <option value="3">3 años</option>
+            <option value="4">4 años</option>
+            <option value="5">5 años</option>
+            <option value="6">6 años</option>
+            <option value="7">7 años</option>
+            <option value="8">8 años</option>
+            <option value="9">9 años</option>
+            <option value="10">10 años</option>
+            <option value="11">11 años</option>
+            <option value="12">12 años</option>
+            <option value="13">13 años</option>
+            <option value="14">14 años</option>
+            <option value="15">15 años</option>
+            <option value="16">16 años</option>
+            <option value="17">17 años</option>
+            <option value="18">18 años</option>
+            <option value="19">19 años</option>
+            <option value="20 o más">20 años o más</option>
+        </select>
+
+        <label for="yearsInCountryFirstLanguage">¿Cuántos años ha pasado en un país donde se habla la primera lengua?</label>
+        <select id="yearsInCountryFirstLanguage" name="yearsInCountryFirstLanguage">
+            <option value="Nacimiento">Desde el nacimiento</option>
+            <option value="Menos de 1 año">Menos de 1 año</option>
+            <option value="1">1 año</option>
+            <option value="2">2 años</option>
+            <option value="3">3 años</option>
+            <option value="4">4 años</option>
+            <option value="5">5 años</option>
+            <option value="6">6 años</option>
+            <option value="7">7 años</option>
+            <option value="8">8 años</option>
+            <option value="9">9 años</option>
+            <option value="10">10 años</option>
+            <option value="11">11 años</option>
+            <option value="12">12 años</option>
+            <option value="13">13 años</option>
+            <option value="14">14 años</option>
+            <option value="15">15 años</option>
+            <option value="16">16 años</option>
+            <option value="17">17 años</option>
+            <option value="18">18 años</option>
+            <option value="19">19 años</option>
+            <option value="20 o más">20 años o más</option>
+        </select>
+
+        <label for="yearsInCountrySegundaLanguage">¿Cuántos años ha pasado en un país donde se habla la segubda lengua?</label>
+        <select id="yearsInCountrySegundaLanguage" name="yearsInCountrySegundaLanguage">
+            <option value="No reporta">No reporta segunda lengua</option>
+            <option value="Nacimiento">Desde el nacimiento</option>
+            <option value="Menos de 1 año">Menos de 1 año</option>
+            <option value="1">1 año</option>
+            <option value="2">2 años</option>
+            <option value="3">3 años</option>
+            <option value="4">4 años</option>
+            <option value="5">5 años</option>
+            <option value="6">6 años</option>
+            <option value="7">7 años</option>
+            <option value="8">8 años</option>
+            <option value="9">9 años</option>
+            <option value="10">10 años</option>
+            <option value="11">11 años</option>
+            <option value="12">12 años</option>
+            <option value="13">13 años</option>
+            <option value="14">14 años</option>
+            <option value="15">15 años</option>
+            <option value="16">16 años</option>
+            <option value="17">17 años</option>
+            <option value="18">18 años</option>
+            <option value="19">19 años</option>
+            <option value="20 o más">20 años o más</option>
+        </select>
+
+        <h2>Uso de lenguas</h2>
+        <p>El uso total de todas las lenguas en cada pregunta debe llegar al 100%</p>
+        <label for="percentageTimeFamilyFirstLanguage">En una semana normal, ¿qué porcentaje del tiempo usa la primera lengua con su familia y amigos?</label>
+        <select id="percentageTimeFamilyFirstLanguage" name="percentageTimeFamilyFirstLanguage">
+            <option value="0">0%</option>
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+            <option value="40">40%</option>
+            <option value="50">50%</option>
+            <option value="60">60%</option>
+            <option value="70">70%</option>
+            <option value="80">80%</option>
+            <option value="90">90%</option>
+            <option value="100">100%</option>
+        </select>
+
+        <label for="percentageTimeFamilySecondLanguage">En una semana normal, ¿qué porcentaje del tiempo usa la segunda lengua con su familia y amigos?</label>
+        <select id="percentageTimeFamilySecondLanguage" name="percentageTimeFamilySecondLanguage">
+            <option value="No reporta">No reporta segunda lengua</option>
+            <option value="0">0%</option>
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+            <option value="40">40%</option>
+            <option value="50">50%</option>
+            <option value="60">60%</option>
+            <option value="70">70%</option>
+            <option value="80">80%</option>
+            <option value="90">90%</option>
+            <option value="100">100%</option>
+        </select>
+
+        <label for="percentageTimeFamilyOtherLanguages">En una semana normal, ¿qué porcentaje del tiempo usa otras lenguas con su familia y amigos?</label>
+        <select id="percentageTimeFamilyOtherLanguages" name="percentageTimeFamilyOtherLanguages">
+            <option value="0">0%</option>
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+            <option value="40">40%</option>
+            <option value="50">50%</option>
+            <option value="60">60%</option>
+            <option value="70">70%</option>
+            <option value="80">80%</option>
+            <option value="90">90%</option>
+            <option value="100">100%</option>
+        </select>
+
+        <h2>Competencia</h2>
+        <p>En esta sección, nos gustaría que considerara su competencia de lengua marcando la casilla de 0 a 6</p>
+        <label for="speakFirstLanguage">¿Cómo HABLA en su primera lengua?</label>
+        <select id="speakFirstLanguage" name="speakFirstLanguage">
+            <option value="1">1 (No muy bien)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 (Muy bien)</option>
+        </select>
+
+        <label for="speakSecondLanguage">¿Cómo HABLA en su segunda lengua?</label>
+        <select id="speakSecondLanguage" name="speakSecondLanguage">
+            <option value="1">1 (No muy bien)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 (Muy bien)</option>
+        </select>
+
+        <label for="understandFirstLanguage">¿Cómo ENTIENDE en su primera lengua?</label>
+        <select id="understandFirstLanguage" name="understandFirstLanguage">
+            <option value="1">1 (No muy bien)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 (Muy bien)</option>
+        </select>
+
+        <label for="understandSecondLanguage">¿Cómo ENTIENDE en su segunda lengua?</label>
+        <select id="understandSecondLanguage" name="understandSecondLanguage">
+            <option value="1">1 (No muy bien)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 (Muy bien)</option>
+        </select>
+
+        <label for="readFirstLanguage">¿Cómo LEE en su primera lengua?</label>
+        <select id="readFirstLanguage" name="readFirstLanguage">
+            <option value="1">1 (No muy bien)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 (Muy bien)</option>
+        </select>
+
+        <label for="readSecondLanguage">¿Cómo LEE en su segunda lengua?</label>
+        <select id="readSecondLanguage" name="readSecondLanguage">
+            <option value="1">1 (No muy bien)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 (Muy bien)</option>
+        </select>
+
+        <label for="writeFirstLanguage">¿Cómo ESCRIBE en su primera lengua?</label>
+        <select id="writeFirstLanguage" name="writeFirstLanguage">
+            <option value="1">1 (No muy bien)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 (Muy bien)</option>
+        </select>
+
+        <label for="writeSecondLanguage">¿Cómo ESCRIBE en su segunda lengua?</label>
+        <select id="writeSecondLanguage" name="writeSecondLanguage">
+            <option value="1">1 (No muy bien)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 (Muy bien)</option>
+        </select>
+
+
+        <h2>Dificultades</h2>
+        <label>¿Ha tenido problemas para producir o comprender el lenguaje en cualquiera de sus idiomas?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" id="problemsYes" name="languageProblems" value="Sí" required>
+                Sí
+            </label>
+            <label>
+                <input type="radio" id="problemsNo" name="languageProblems" value="No">
+                No
+            </label>
+        </div>
+
+        <div id="problemsDetails">
+            <label for="problemsType">Si respondió SÍ, ¿qué tipo de dificultades observó?</label>
+            <input type="text" id="problemsType" name="problemsType">
+
+            <label for="problemsAge">¿A qué edad comenzó a notar esas dificultades?</label>
+            <input type="number" id="problemsAge" name="problemsAge">
+
+            <label for="problemsImpact">¿Cuánto afectan estas dificultades sus actividades cotidianas?</label>
+            <select id="problemsImpact" name="problemsImpact">
+                <option value="0">Nada</option>
+                <option value="1">Muy poco</option>
+                <option value="2">Poco</option>
+                <option value="3">Bastante</option>
+                <option value="4">Mucho</option>
+                <option value="5">Muchísimo</option>
+                <option value="6">Totalmente</option>
+            </select>
+        </div>
+
+        <button type="submit">Enviar respuestas</button>
+    </form>
+
+    <script>
+        // Show/hide additional questions based on the response to the language problems question
+        document.querySelector('input[name="languageProblems"]').addEventListener('change', function() {
+            var problemsDetails = document.getElementById('problemsDetails');
+            problemsDetails.style.display = this.value === 'Sí' ? 'block' : 'none';
+        });
+
+        // Para ocultar los detalles si la respuesta cambia a "No"
+        document.querySelector('input[name="languageProblems"][value="No"]').addEventListener('change', function() {
+            var problemsDetails = document.getElementById('problemsDetails');
+            problemsDetails.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
