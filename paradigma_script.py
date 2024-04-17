@@ -658,7 +658,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
@@ -778,7 +778,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
@@ -898,13 +898,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_3.keys in ['', [], None]:  # No response was made
         key_resp_3.keys = None
     # thisExp.addData('key_resp_3.keys',key_resp_3.keys)
-    if key_resp_3.keys != None:  # we had a response
+    # if key_resp_3.keys != None:  # we had a response
         # thisExp.addData('key_resp_3.rt', key_resp_3.rt)
         # thisExp.addData('key_resp_3.duration', key_resp_3.duration)
-    thisExp.nextEntry()
     # Run 'End Routine' code from code
     recorder.stop_recording()
     thisExp.addData('fin_grabacion', globalClock.getTime(format='%H:%M:%S.%f%z'))
+    thisExp.nextEntry()
+
 
     # the Routine "grabacion_sin_estimulo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -1022,7 +1023,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
@@ -1145,10 +1146,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     #if key_resp_3.keys != None:  # we had a response
         # thisExp.addData('key_resp_3.rt', key_resp_3.rt)
         # thisExp.addData('key_resp_3.duration', key_resp_3.duration)
-    thisExp.nextEntry()
     # Run 'End Routine' code from code
     recorder.stop_recording()
     thisExp.addData('fin_grabacion', globalClock.getTime(format='%H:%M:%S.%f%z'))
+    thisExp.nextEntry()
+
 
     # the Routine "grabacion_sin_estimulo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -1266,10 +1268,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
-    thisExp.nextEntry()
+    # thisExp.nextEntry()
     # the Routine "instrucciones" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1391,13 +1393,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_5.keys in ['', [], None]:  # No response was made
         key_resp_5.keys = None
     # thisExp.addData('key_resp_5.keys',key_resp_5.keys)
-    if key_resp_5.keys != None:  # we had a response
+    # if key_resp_5.keys != None:  # we had a response
         # thisExp.addData('key_resp_5.rt', key_resp_5.rt)
         # thisExp.addData('key_resp_5.duration', key_resp_5.duration)
-    thisExp.nextEntry()
     # Run 'End Routine' code from code_3
     recorder.stop_recording()
     thisExp.addData('fin_grabacion', globalClock.getTime(format='%H:%M:%S.%f%z'))
+    thisExp.nextEntry()
+
 
     # the Routine "lamina" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -1515,7 +1518,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
@@ -1639,13 +1642,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_5.keys in ['', [], None]:  # No response was made
         key_resp_5.keys = None
     # thisExp.addData('key_resp_5.keys',key_resp_5.keys)
-    if key_resp_5.keys != None:  # we had a response
+    # if key_resp_5.keys != None:  # we had a response
         # thisExp.addData('key_resp_5.rt', key_resp_5.rt)
         # thisExp.addData('key_resp_5.duration', key_resp_5.duration)
-    thisExp.nextEntry()
     # Run 'End Routine' code from code_3
     recorder.stop_recording()
     thisExp.addData('fin_grabacion', globalClock.getTime(format='%H:%M:%S.%f%z'))
+    thisExp.nextEntry()
+
 
     # the Routine "lamina" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -1763,7 +1767,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
@@ -1936,7 +1940,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_7.keys in ['', [], None]:  # No response was made
         key_resp_7.keys = None
     # thisExp.addData('key_resp_7.keys',key_resp_7.keys)
-    if key_resp_7.keys != None:  # we had a response
+    # if key_resp_7.keys != None:  # we had a response
         # thisExp.addData('key_resp_7.rt', key_resp_7.rt)
         # thisExp.addData('key_resp_7.duration', key_resp_7.duration)
     thisExp.nextEntry()
@@ -2056,13 +2060,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_3.keys in ['', [], None]:  # No response was made
         key_resp_3.keys = None
     # thisExp.addData('key_resp_3.keys',key_resp_3.keys)
-    if key_resp_3.keys != None:  # we had a response
+    # if key_resp_3.keys != None:  # we had a response
         # thisExp.addData('key_resp_3.rt', key_resp_3.rt)
         # thisExp.addData('key_resp_3.duration', key_resp_3.duration)
-    thisExp.nextEntry()
     # Run 'End Routine' code from code
     recorder.stop_recording()
     thisExp.addData('fin_grabacion', globalClock.getTime(format='%H:%M:%S.%f%z'))
+    thisExp.nextEntry()
+
 
     # the Routine "grabacion_sin_estimulo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -2180,7 +2185,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
@@ -2236,6 +2241,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update status
             text_3.status = STARTED
             text_3.setAutoDraw(True)
+            thisExp.addData('inicio_parrafo', globalClock.getTime(format='%H:%M:%S.%f%z'))
+
         
         # if text_3 is active this frame...
         if text_3.status == STARTED:
@@ -2306,7 +2313,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_6.keys in ['', [], None]:  # No response was made
         key_resp_6.keys = None
     # thisExp.addData('key_resp_6.keys',key_resp_6.keys)
-    if key_resp_6.keys != None:  # we had a response
+    # if key_resp_6.keys != None:  # we had a response
         # thisExp.addData('key_resp_6.rt', key_resp_6.rt)
         # thisExp.addData('key_resp_6.duration', key_resp_6.duration)
     thisExp.nextEntry()
@@ -2426,7 +2433,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
@@ -2546,13 +2553,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_3.keys in ['', [], None]:  # No response was made
         key_resp_3.keys = None
     # thisExp.addData('key_resp_3.keys',key_resp_3.keys)
-    if key_resp_3.keys != None:  # we had a response
+    # if key_resp_3.keys != None:  # we had a response
         # thisExp.addData('key_resp_3.rt', key_resp_3.rt)
         # thisExp.addData('key_resp_3.duration', key_resp_3.duration)
-    thisExp.nextEntry()
     # Run 'End Routine' code from code
     recorder.stop_recording()
     thisExp.addData('fin_grabacion', globalClock.getTime(format='%H:%M:%S.%f%z'))
+    thisExp.nextEntry()
+
 
     # the Routine "grabacion_sin_estimulo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -2670,7 +2678,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
@@ -2790,13 +2798,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_3.keys in ['', [], None]:  # No response was made
         key_resp_3.keys = None
     # thisExp.addData('key_resp_3.keys',key_resp_3.keys)
-    if key_resp_3.keys != None:  # we had a response
+    # if key_resp_3.keys != None:  # we had a response
         # thisExp.addData('key_resp_3.rt', key_resp_3.rt)
         # thisExp.addData('key_resp_3.duration', key_resp_3.duration)
-    thisExp.nextEntry()
     # Run 'End Routine' code from code
     recorder.stop_recording()
     thisExp.addData('fin_grabacion', globalClock.getTime(format='%H:%M:%S.%f%z'))
+    thisExp.nextEntry()
+
 
     # the Routine "grabacion_sin_estimulo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -2914,7 +2923,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     if key_resp_2.keys in ['', [], None]:  # No response was made
         key_resp_2.keys = None
     # thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
+    # if key_resp_2.keys != None:  # we had a response
         # thisExp.addData('key_resp_2.rt', key_resp_2.rt)
         # thisExp.addData('key_resp_2.duration', key_resp_2.duration)
     thisExp.nextEntry()
