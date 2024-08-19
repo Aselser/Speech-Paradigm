@@ -1,10 +1,5 @@
-Los audios solo se pueden cortar con espacio a partir de los 5 segundos.
+Las grabaciones solo se pueden cortar con espacio a partir de los 5 segundos.
 
 Para correr el formulario hay que correrlo en la carpeta que esta. 
 Va aparecer algo asi:  Running on http://127.0.0.1:5000
 si haces click se abre el formulario
-
-El audio de la historia esta en la carpeta pero no en el paradigma (no lo puedo solucionar aun)
-
-
-
