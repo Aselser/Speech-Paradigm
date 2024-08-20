@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on agosto 19, 2024, at 12:18
+    on agosto 19, 2024, at 23:28
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,6 +37,19 @@ from psychopy.hardware import keyboard
 from audioRecorder import AudioRecorder
 import pandas as pd
 import os
+import serial.tools.list_ports
+
+def list_serial_ports():
+    ports = serial.tools.list_ports.comports()
+    arduino_ports = []
+
+    for port in ports:
+        # You can add more checks here based on the specific attributes of your Arduino
+        if 'Arduino' in port.description or 'CH340' in port.description:
+            arduino_ports.append(port.device)
+
+    return arduino_ports[0]
+
 # --- Setup global variables (available in all functions) ---
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -47,7 +60,6 @@ expInfo = {
     'Nombre': '',
     'Edad': '',
     'Lateralidad': ["","Derecha","Izquierda"],
-    'COM': list(range(1,25)),
     'date': data.getDateStr(),  # add a simple timestamp
     'expName': expName,
     'psychopyVersion': psychopyVersion,
@@ -357,7 +369,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         depth=0.0);
     key_resp_welcome = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code_general
-    puerto = 'COM' + expInfo['COM']
+    puerto = list_serial_ports()
     recorder = AudioRecorder(mic_id = 0, sample_rate = 48000, channels = 1, arduino_port = puerto)
     
     # --- Initialize components for Routine "typical_day_instructions" ---
@@ -1291,6 +1303,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code_6
     if key_resp_typical_day_instructions.keys != 's':
         recorder.stop_recording()
+        tempFileName = thisExp.dataFileName + '_TEMP.csv' 
+        thisExp.saveAsWideText(tempFileName)   
     # the Routine "typical_day_recording" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1509,6 +1523,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code_7
     if key_resp_pleasant_memory_instructions.keys != 's':
         recorder.stop_recording()
+        tempFileName = thisExp.dataFileName + '_TEMP.csv' 
+        thisExp.saveAsWideText(tempFileName)   
     # the Routine "pleasant_memory_recording" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1721,6 +1737,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code_3
     if key_resp_picture_description_instructions.keys != 's': 
         recorder.stop_recording()
+        tempFileName = thisExp.dataFileName + '_TEMP.csv' 
+        thisExp.saveAsWideText(tempFileName)   
     # the Routine "picture" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1943,6 +1961,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code_8
     if key_resp_picture_description_instructions_2.keys != 's':
         recorder.stop_recording()
+        tempFileName = thisExp.dataFileName + '_TEMP.csv' 
+        thisExp.saveAsWideText(tempFileName)   
     # the Routine "picture_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2377,6 +2397,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code_9
     if key_resp_retelling.keys != 's':
         recorder.stop_recording()
+        tempFileName = thisExp.dataFileName + '_TEMP.csv' 
+        thisExp.saveAsWideText(tempFileName)   
     # the Routine "retelling_recording" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2599,6 +2621,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code_5
     if key_resp_reading_instructions.keys != 's':
         recorder.stop_recording()
+        tempFileName = thisExp.dataFileName + '_TEMP.csv' 
+        thisExp.saveAsWideText(tempFileName)   
     # the Routine "paragraph" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2821,6 +2845,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code_10
     if key_resp_letter_A_instructions.keys != 's':
         recorder.stop_recording()
+        tempFileName = thisExp.dataFileName + '_TEMP.csv' 
+        thisExp.saveAsWideText(tempFileName)   
     # the Routine "letter_A_recording" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -3043,6 +3069,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code_11
     if key_resp_pataka_instructions.keys != 's':
         recorder.stop_recording()
+        tempFileName = thisExp.dataFileName + '_TEMP.csv' 
+        thisExp.saveAsWideText(tempFileName)   
     # the Routine "pataka_recording" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     

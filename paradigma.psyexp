@@ -8,7 +8,7 @@
     <Param val="u'data/%s/%s' % (expInfo['Nombre'], expName)" valType="code" updates="None" name="Data filename"/>
     <Param val="False" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="" valType="str" updates="None" name="End Message"/>
-    <Param val="{'Nombre': '', 'Edad': '', 'Lateralidad': '[&quot;&quot;,&quot;Derecha&quot;,&quot;Izquierda&quot;]', 'COM': 'list(range(1,25))'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="{'Nombre': '', 'Edad': '', 'Lateralidad': '[&quot;&quot;,&quot;Derecha&quot;,&quot;Izquierda&quot;]'}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
     <Param val="" valType="str" updates="None" name="HTML path"/>
@@ -378,9 +378,9 @@
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
       <CodeComponent name="code_general" plugin="None">
-        <Param val="from audioRecorder import AudioRecorder&amp;#10;import pandas as pd&amp;#10;import os" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="from audioRecorder import AudioRecorder&amp;#10;import pandas as pd&amp;#10;import os&amp;#10;import serial.tools.list_ports&amp;#10;&amp;#10;def list_serial_ports():&amp;#10;    ports = serial.tools.list_ports.comports()&amp;#10;    arduino_ports = []&amp;#10;&amp;#10;    for port in ports:&amp;#10;        # You can add more checks here based on the specific attributes of your Arduino&amp;#10;        if 'Arduino' in port.description or 'CH340' in port.description:&amp;#10;            arduino_ports.append(port.device)&amp;#10;&amp;#10;    return arduino_ports[0]&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="puerto = 'COM' + expInfo['COM']&amp;#10;recorder = AudioRecorder(mic_id = 0, sample_rate = 48000, channels = 1, arduino_port = puerto)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="puerto = list_serial_ports()&amp;#10;recorder = AudioRecorder(mic_id = 0, sample_rate = 48000, channels = 1, arduino_port = puerto)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
